@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel - Al Khayam</title>
+<link rel="stylesheet" href="Assets/css/admin.css">
+</head>
+<body>
+
+  <!-- LOGIN SCREEN -->
+  <div id="loginScreen" class="login-container">
+    <div class="login-box">
+      <h2>🔐 Admin Login</h2>
+      <p>Al Khayam Restaurant</p>
+      <input type="password" id="passwordInput" placeholder="Enter Password" onkeypress="if(event.key==='Enter') login()">
+      <button onclick="login()">Login</button>
+      <p class="hint">Default: alkhayam123</p>
+    </div>
+  </div>
+
+  <!-- ADMIN DASHBOARD -->
+  <div id="dashboard" class="dashboard hidden">
+    <header>
+      <h1>AL KHAYAM ADMIN</h1>
+      <button onclick="logout()" class="logout-btn">Logout</button>
+    </header>
+
+    <div class="container">
+
+      <div class="stats">
+        <div class="stat-box">
+          <span id="totalItems">0</span>
+          <label>Total Items</label>
+        </div>
+        <div class="stat-box">
+          <span id="totalCategories">0</span>
+          <label>Categories</label>
+        </div>
+      </div>
+
+      <!-- ADD NEW ITEM -->
+      <div class="card">
+        <h3>➕ Add New Item</h3>
+        <div class="form-group">
+          <input type="text" id="itemName" placeholder="Item Name (e.g., Chicken Biryani)">
+        </div>
+        <div class="form-group">
+          <select id="itemCategory">
+            <option value="breakfast">Breakfast</option>
+            <option value="bread">Bread Basket</option>
+            <option value="sandwich">Sandwiches & Shawarma</option>
+            <option value="snack_plate">Snack Plate</option>
+            <option value="snacks">Snacks</option>
+            <option value="hot">Hot Beverages</option>
+            <option value="juice">Juice</option>
+            <option value="soft">Soft Drinks</option>
+            <option value="mutton">Mutton</option>
+            <option value="beef">Beef</option>
+            <option value="chicken">Chicken</option>
+            <option value="egg">Egg</option>
+            <option value="veg">Veg Dishes</option>
+            <option value="fish">Fish</option>
+            <option value="fried_rice">Fried Rice</option>
+            <option value="noodles">Noodles</option>
+            <option value="biryani">Biryani & Rices</option>
+            <option value="charcoal">Charcoal</option>
+            <option value="burger">Burger</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <input type="text" id="itemPrice" placeholder="Price (e.g., 15 or 6/10)">
+        </div>
+        <button onclick="addItem()" class="btn-save">Save Item</button>
+      </div>
+
+      <!-- MENU LIST -->
+      <div class="card">
+        <h3>📋 Manage Menu Items</h3>
+        <input type="text" id="searchAdmin" placeholder="🔍 Search items..." oninput="renderAdminList()">
+        <div id="adminList" class="admin-list"></div>
+      </div>
+
+      <!-- EXPORT -->
+      <div class="card">
+        <h3>💾 Export & Save</h3>
+        <p class="note">After editing, click Export to download the updated menu file. Then replace the old <b>menu.js</b> file.</p>
+        <button onclick="exportMenu()" class="btn-export">📥 Export menu.js</button>
+        <button onclick="resetMenu()" class="btn-reset">🔄 Reset to Original</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="Assets/data/menu.js"></script>
+  <script src="Assets/js/admin.js"></script>
+</body>
+</html> 

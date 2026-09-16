@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Al Khayam Restaurant — Bakery & Restaurant</title>
+<meta name="description" content="Al Khayam Restaurant — Bakery & Restaurant. Delicious food, fresh every day. Order via WhatsApp.">
+<link rel="stylesheet" href="Assets/css/style.css">
+</head>
+<body>
+
+  <header>
+    <h1>AL KHAYAM</h1>
+    <p>BAKERY & RESTAURANT</p>
+  </header>
+
+  <section class="hero">
+    <h2>Delicious Food, Fresh Every Day</h2>
+    <p>Authentic taste • Fresh ingredients • Made with love</p>
+    <div class="hero-btns">
+      <a href="#menu" class="btn btn-primary">View Menu</a>
+      <a href="https://wa.me/971565043688" target="_blank" class="btn btn-outline">Order on WhatsApp</a>
+    </div>
+  </section>
+
+  <div class="info-strip">
+    <div class="info-item">
+      <strong>📍 Location</strong>
+      Al Khayam Restaurant
+    </div>
+    <div class="info-item">
+      <strong>📱 WhatsApp</strong>
+      +971 56 504 3688
+    </div>
+    <div class="info-item">
+      <strong>🕒 Open Daily</strong>
+      Fresh & Ready
+    </div>
+  </div>
+    <!-- OPENING HOURS BAR -->
+  <div class="hours-bar">
+    🕒 Open Daily: <span class="highlight">5:30 AM — 12:00 AM</span>
+    <span>|</span>
+    🕌 Friday: <span class="highlight">12:00 PM — 1:00 PM (Jumu'ah Break)</span>
+  </div>
+
+  <div class="search-box">
+    <input type="text" class="search-input" id="searchInput" placeholder="🔍 Search for a dish...">
+  </div>
+
+  <div class="categories" id="categories">
+    <button class="cat-btn active" data-cat="all">All</button>
+    <button class="cat-btn" data-cat="breakfast">Breakfast</button>
+    <button class="cat-btn" data-cat="bread">Bread Basket</button>
+    <button class="cat-btn" data-cat="sandwich">Sandwiches</button>
+    <button class="cat-btn" data-cat="snack_plate">Snack Plate</button>
+    <button class="cat-btn" data-cat="snacks">Snacks</button>
+    <button class="cat-btn" data-cat="hot">Hot Beverages</button>
+    <button class="cat-btn" data-cat="juice">Juice</button>
+    <button class="cat-btn" data-cat="soft">Soft Drinks</button>
+    <button class="cat-btn" data-cat="mutton">Mutton</button>
+    <button class="cat-btn" data-cat="beef">Beef</button>
+    <button class="cat-btn" data-cat="chicken">Chicken</button>
+    <button class="cat-btn" data-cat="egg">Egg</button>
+    <button class="cat-btn" data-cat="veg">Veg Dishes</button>
+    <button class="cat-btn" data-cat="fried_rice">Fried Rice</button>
+    <button class="cat-btn" data-cat="noodles">Noodles</button>
+    <button class="cat-btn" data-cat="biryani">Biryani & Rices</button>
+    <button class="cat-btn" data-cat="charcoal">Charcoal</button>
+    <button class="cat-btn" data-cat="burger">Burger</button>
+  </div>
+
+  <section class="menu-section" id="menu">
+    <div id="menuContainer"></div>
+  </section>
+
+  <button class="cart-btn" onclick="openCart()">
+    🛒 Cart <span class="cart-count" id="cartCount">0</span>
+  </button>
+
+  <div class="modal-overlay" id="cartModal">
+    <div class="modal">
+      <h2>Your Order <button class="close-btn" onclick="closeCart()">×</button></h2>
+      <div id="cartItems"></div>
+      <div id="cartFooter"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast">Item added!</div>
+
+  <footer>
+    <h3>AL KHAYAM</h3>
+    <p class="tagline">BAKERY & RESTAURANT</p>
+    <p>📍 <a href="https://maps.app.goo.gl/Lop6t3asYqe2o2Xo8" target="_blank">View on Google Maps</a></p>
+    <p>📱 <a href="https://wa.me/971565043688" target="_blank">+971 56 504 3688</a></p>
+    <p style="margin-top:10px;">🕒 Open Daily: 5:30 AM — 12:00 AM</p>
+    <p style="font-size:12px;">🕌 Friday Jumu'ah Break: 12:00 PM — 1:00 PM</p>
+    <p style="font-size:12px; margin-top:10px;">Awfaq Building, Amman Street, Al Qusais Ind 3, Beside Masjidul Muthaqeen, Dubai, UAE</p>
+    <p class="copyright">© 2026 Al Khayam Restaurant</p>
+  </footer>
+
+  <script src="Assets/data/menu.js"></script>
+  <script src="Assets/js/script.js"></script>
+
+</body>
+</html>
